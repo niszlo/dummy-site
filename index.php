@@ -4,7 +4,7 @@ Index file
 */
 include("header.php");
 ?>
-<title>Mon site de test</title>
+<title>Mon site dummy de test</title>
 </head>
 <body>
 CORPS
