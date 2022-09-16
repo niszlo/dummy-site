@@ -27,17 +27,18 @@ $tbq = "SELECT `id` FROM `multilang` WHERE `element` = 'foot'";
 $tbr = $mysqli->query($tbq, MYSQLI_ASSOC);
 if($tbr) $tbr->fetch_object();
 if (!isset($tbv->id) || $tbv->id != 9) {
+	$mysqli->query("DROP TABLE `multilang`");
 	$mysqli->query("CREATE TABLE IF NOT EXISTS `multilang` (`id` INT NOT NULL AUTO_INCREMENT PRIMARY KEY, `element` VARCHAR(255), `fr` VARCHAR(255), `en` VARCHAR(255))");
-	$mysqli->query("INSERT INTO `multilang` (`id`, `element`, `fr`, `en`) VALUES ('', 'description', 'Ceci est mon site dummy de test', 'This is my dummy test website')");
-	$mysqli->query("INSERT INTO `multilang` (`id`, `element`, `fr`, `en`) VALUES ('', 'keywords', 'site, dummy, test', 'webiste, dummy, test')");
-	$mysqli->query("INSERT INTO `multilang` (`id`, `element`, `fr`, `en`) VALUES ('', 'title', 'Mon site dummy de test', 'My test dummy website')");
-	$mysqli->query("INSERT INTO `multilang` (`id`, `element`, `fr`, `en`) VALUES ('', 'h1', 'Pr&eacute;sentation', 'Introduction')");
-	$mysqli->query("INSERT INTO `multilang` (`id`, `element`, `fr`, `en`) VALUES ('', 'p1', 'Cette page est un simple &eacute;l&eacute;ment de test en deux langues pour les divers besoins d\'exercises.', 'This page is a simple test element in two languages for various exercising needs.')");
-	$mysqli->query("INSERT INTO `multilang` (`id`, `element`, `fr`, `en`) VALUES ('', 'h2', 'Explication', 'Explanation')");
-	$mysqli->query("INSERT INTO `multilang` (`id`, `element`, `fr`, `en`) VALUES ('', 'p2', 'Le contenu que vous trouverez ici n\'est donc pas r&eacute;el, il ne sert que pour tester des affichages.', 'The content you find here is therefore not real, its only use is for display testings.')");
-	$mysqli->query("INSERT INTO `multilang` (`id`, `element`, `fr`, `en`) VALUES ('', 'h3', 'Conclusion', 'Conclusion')");
-	$mysqli->query("INSERT INTO `multilang` (`id`, `element`, `fr`, `en`) VALUES ('', 'p3', 'Nous esp&eacute;rons vous revoir bient&ocirc;t sur ce site, en vous souhaitant une excellente journ&eacute;e.', 'We hope to see you again on our website, wishing you the best possible day.')");
-	$mysqli->query("INSERT INTO `multilang` (`id`, `element`, `fr`, `en`) VALUES ('', 'foot', 'Contactez-nous', 'Contact us')");
+	$mysqli->query("INSERT INTO `multilang` (`id`, `element`, `fr`, `en`) VALUES (1, 'description', 'Ceci est mon site dummy de test', 'This is my dummy test website')");
+	$mysqli->query("INSERT INTO `multilang` (`id`, `element`, `fr`, `en`) VALUES (2, 'keywords', 'site, dummy, test', 'webiste, dummy, test')");
+	$mysqli->query("INSERT INTO `multilang` (`id`, `element`, `fr`, `en`) VALUES (3, 'title', 'Mon site dummy de test', 'My test dummy website')");
+	$mysqli->query("INSERT INTO `multilang` (`id`, `element`, `fr`, `en`) VALUES (4, 'h1', 'Pr&eacute;sentation', 'Introduction')");
+	$mysqli->query("INSERT INTO `multilang` (`id`, `element`, `fr`, `en`) VALUES (5, 'p1', 'Cette page est un simple &eacute;l&eacute;ment de test en deux langues pour les divers besoins d\'exercises.', 'This page is a simple test element in two languages for various exercising needs.')");
+	$mysqli->query("INSERT INTO `multilang` (`id`, `element`, `fr`, `en`) VALUES (6, 'h2', 'Explication', 'Explanation')");
+	$mysqli->query("INSERT INTO `multilang` (`id`, `element`, `fr`, `en`) VALUES (7, 'p2', 'Le contenu que vous trouverez ici n\'est donc pas r&eacute;el, il ne sert que pour tester des affichages.', 'The content you find here is therefore not real, its only use is for display testings.')");
+	$mysqli->query("INSERT INTO `multilang` (`id`, `element`, `fr`, `en`) VALUES (8, 'h3', 'Conclusion', 'Conclusion')");
+	$mysqli->query("INSERT INTO `multilang` (`id`, `element`, `fr`, `en`) VALUES (9, 'p3', 'Nous esp&eacute;rons vous revoir bient&ocirc;t sur ce site, en vous souhaitant une excellente journ&eacute;e.', 'We hope to see you again on our website, wishing you the best possible day.')");
+	$mysqli->query("INSERT INTO `multilang` (`id`, `element`, `fr`, `en`) VALUES (10, 'foot', 'Contactez-nous', 'Contact us')");
 }
 if($tbr) $tbr->close();
 
