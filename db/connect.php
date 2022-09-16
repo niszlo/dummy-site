@@ -3,8 +3,8 @@
 Mysql(i) connect & init
 */
 $srv = 'localhost';
-$usr = 'root';
-$pas = '';
+$usr = 'test';
+$pas = 'test';
 $mysqli = @mysqli_connect($srv, $usr, $pas);
 if (mysqli_connect_errno()) {
   echo "Failed to connect to DB: " . mysqli_connect_error();
