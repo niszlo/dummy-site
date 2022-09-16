@@ -7,6 +7,7 @@ if(isset($_GET['l']) && $_GET['l'] == 'en') {
 } else {
 	$lang = 'fr';
 }
+include_once("db/_preload.php");
 include_once("db/connect.php");
 include_once("inc/header.php");
 ?>
